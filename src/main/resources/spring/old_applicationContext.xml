@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+	Application context definition for PetClinic on Hibernate.
+-->
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:p="http://www.springframework.org/schema/p" xmlns:context="http://www.springframework.org/schema/context"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+			http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
+
+	<!-- ========================= RESOURCE DEFINITIONS ========================= -->
+
+    <!-- import the dataSource definition -->
+    <import resource="applicationContext-hibernate.xml"/>
+
+	<context:annotation-config/>
+
+	<bean id="BetEngineBean" class="com.rob.betBot.engine.BetEngine">
+		<constructor-arg index="0"><ref bean="RaceManagerBean"/></constructor-arg>
+		<constructor-arg index="1"><ref bean="BetManagerBean"/></constructor-arg>
+		<constructor-arg index="2"><ref bean="PricesManagerBean"/></constructor-arg>
+		<constructor-arg index="3"><null /></constructor-arg>
+	</bean>
+	
+	<bean id="RaceManagerBean" class="com.rob.betBot.emulated.EmulatedRaceManager" />
+	<bean id="BetManagerBean" class="com.rob.betBot.emulated.EmulatedBetManager" />
+	<bean id="PricesManagerBean" class="com.rob.betBot.emulated.EmulatedPricesManager" />
+
+</beans>

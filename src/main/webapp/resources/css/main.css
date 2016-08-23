@@ -1,0 +1,204 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+a {
+  text-decoration: none;
+  color: #88ff88;
+  font-family: Arial;
+  font-weight: bold;
+}
+a:hover {
+  text-decoration: underline;
+}
+.main {
+  color: white;
+  margin: 0px;
+  width: 100%;
+  float: left;
+}
+.section {
+/*  position: absolute;*/
+  width: 100%;
+}
+.topSection {
+  height: 100px;
+}
+.menuSection {
+  height: 50px;
+  /* top: 100px;*/
+}
+.middleSection {
+  bottom: 50px;
+  /* top: 150px; */
+}
+.bottomSection {
+  bottom: 0px;
+  height: 50px;
+}
+.panel {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #5e5e5e;
+  border-radius:10px;
+  margin: 0px auto;
+}
+.top {
+  font-family: "Courier New", Courier;
+  font-size: 30px;
+  font-weight: bold;
+  height: 90px;
+  margin-top: 5px;
+  overflow: hidden; <!-- stop margin collapse -->
+}
+.menu {
+  height: 45px;
+}
+.middle {
+  font: 15px arial bold;
+  height: 100%;
+  overflow-y: auto;
+}
+.bottom {
+  height: 40px;
+  margin-top: 5px;
+}
+.menu {
+  height: 45px;
+  padding: 0px;
+  text-align: center;
+}
+.menu ul {
+  display: inline-block;
+  padding: 0px;
+  margin: 5px auto 0px;;
+}
+.menu li {
+  float: left;
+  list-style: none;
+}
+.menu a {
+  color: white;
+  display: block;
+  font: 20px arial bold;
+  width: 150px;
+  text-decoration: none;
+}
+.menu a:hover {
+  font-size: 24;
+}
+.module {
+  background-color: #33ff99;
+  border-radius:10px;
+  color: black;
+  float: left;
+  font: 10px arial;
+  height: 120px;
+  margin: 5px 5px 0px 0px;
+  padding: 5px;
+  position: relative;
+  width: 189px;
+}
+.module a {
+	color: black;
+}
+.contentWrap a {
+	color: black;
+}
+.module a:hover {
+	text-decoration: underline;
+}
+.buttons {
+  text-align: center;
+  bottom: 15px;
+  margin: 0px auto;
+  position: absolute;
+  text-align: center;
+  width: 100%;
+}
+.verticalDivide {
+  background-color: white;
+  float:left;
+  height: 99%;
+  margin: 2px;
+  overflow: hidden;
+}
+#bot {
+  float: left;
+  overtflow: hidden;
+  overflow-y: auto;
+  padding: 5px;
+  width: 200px;
+}
+#modules {
+  overtflow: hidden;
+  overflow-y: auto;
+  padding: 5px;
+}
+#moduleOverlay {
+  display: none;
+  height: 500px;
+  width: 400px;
+}
+div .contentWrap {
+  background-color: #33ff99;
+  border-radius:10px;
+  color: black;
+  float: left;
+  font: 12 arial bold;
+  height: 400px;
+  margin: auto auto;
+  padding: 5px;
+  width: 500px;
+}
+.listItem {
+  color: #5e5e5e;
+  background-color: white;
+  border: 1px solid #5e5e5e;
+  border-radius: 5px;
+  font: normal 14px arial;
+  margin: 1px;
+  overflow: hidden;
+  padding: 1px;
+}
+.listItem a {
+  background-color: #5e5e5e;
+  border-radius: 3px;
+  color: white;
+}
+.eventTime {
+  background-color: white;
+  border: 1px solid #5e5e5e;
+  color: #5e5e5e;
+  float: left;
+  font: bold 14px arial;
+  height: 20px;
+  width: 100px;
+}
+.eventDescription {
+  background-color: white;
+  border: 1px solid #5e5e5e;
+  color: #5e5e5e;
+  font: bold 14px arial;
+  height: 20px;
+}
+.login {
+  color: white;
+  font-family: Arial;
+  font-size: 14px;
+}
+.login a {
+  color: white;
+}
+#errorPanel {
+  background-color: red;
+  color: white;
+  text-align: center;
+  font-family: Arial;
+  font-size: 14px;
+  font-weight: bold;
+}
+.warning {
+  background-color: red;
+  color: white;
+}

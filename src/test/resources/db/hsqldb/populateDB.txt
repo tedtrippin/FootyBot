@@ -1,0 +1,2 @@
+INSERT INTO racetime VALUES (1, 'Newbury 16:00 1m Hcap', 60000, 60000, 60000);
+INSERT INTO racetime VALUES (2, 'Newbury 16:00 7f Hcap', 60000, 60000, 60000);

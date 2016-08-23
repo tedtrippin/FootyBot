@@ -1,0 +1,44 @@
+CREATE TABLE racetime (
+	id BIGINT NOT NULL PRIMARY KEY,
+	race_name VARCHAR(1024),
+	duration_ms BIGINT
+);
+
+CREATE TABLE wh_event_parent (
+	id BIGINT NOT NULL,
+	name VARCHAR(1024),
+	connect_string VARCHAR(2000)
+ );
+ 
+CREATE TABLE event (
+	id BIGINT NOT NULL,
+	exchange_id INT NOT NULL,
+    location VARCHAR(1024),
+    exchange_event_id VARCHAR(1024),
+    event_name VARCHAR(1024),
+    sport VARCHAR(1024),
+    expected_start_time BIGINT,
+    actual_start_time BIGINT,
+    finished_time BIGINT
+ ); 
+ 
+CREATE TABLE market (
+	id BIGINT NOT NULL,
+    event_id BIGINT NOT NULL,
+    exchange_market_id VARCHAR(1024),
+    market_name VARCHAR(1024),
+    market_type VARCHAR(256)
+);
+
+CREATE TABLE runner (
+	id BIGINT NOT NULL,
+	exchange_id INT NOT NULL,
+    exchange_runner_id BIGINT,
+    runner_name VARCHAR(1024)
+);
+
+CREATE TABLE market_runners (
+	exchange_market_id VARCHAR(1024) NOT NULL,
+	exchange_runner_id BIGINT NOT NULL
+);
+
