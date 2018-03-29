@@ -140,7 +140,11 @@ public class BetfairBetManager extends AbstractBetManager {
             log.debug("  finished, betId[" + confirmation.getBetId() + "] status[" + confirmation.getStatus() + "]");
             switch (confirmation.getStatus()) {
                 case SUCCESS :
-                    journal.info("  bet status[betId:" + confirmation.getBetId() + "]");
+
+                    journal.info(new StringBuilder("  bet placed[betId: ").append(confirmation.getBetId())
+                        .append(", avg price: ").append(confirmation.getAveragePriceMatched())
+                        .append("]").toString());
+
                     long selectionId = confirmation.getInstruction().getSelectionId();
                     BetRequest request = betRequestsMap.get(Long.valueOf(selectionId));
                     BetfairBet bet = new BetfairBet(confirmation.getBetId(), request);
